@@ -1,6 +1,6 @@
 ![image](images/microchip.jpg) 
 
-## %repoDescritpion%
+## dspic33ck curiosity uart autobaud demo
 
 Board Image if any.
 
