@@ -47,7 +47,7 @@
 enum EXT_INT
 {
     INT0,   ///< External Interrupt - INT0
-    AutobaudSwitch,   ///< External Interrupt - INT1
+    Autobaud_Trigger_Switch,   ///< External Interrupt - INT1
 };
 
 #endif    /* _EXT_INT_TYPES_H */

@@ -32,6 +32,7 @@
           <itemPath>mcc_generated_files/uart/uart_interface.h</itemPath>
           <itemPath>mcc_generated_files/uart/uart2.h</itemPath>
           <itemPath>mcc_generated_files/uart/uart1.h</itemPath>
+          <itemPath>mcc_generated_files/uart/uart3.h</itemPath>
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
@@ -69,6 +70,7 @@
           <logicalFolder name="src" displayName="src" projectFiles="true">
             <itemPath>mcc_generated_files/uart/src/uart1.c</itemPath>
             <itemPath>mcc_generated_files/uart/src/uart2.c</itemPath>
+            <itemPath>mcc_generated_files/uart/src/uart3.c</itemPath>
           </logicalFolder>
         </logicalFolder>
       </logicalFolder>

@@ -40,7 +40,7 @@
 #include <stddef.h>
 
 // Section: Driver Interface
-const struct EXT_INTERRUPT_INTERFACE External_Interrupt = {
+const struct EXT_INTERRUPT_INTERFACE External_Trigger_Switches = {
     .Initialize = &EXT_INT_Initialize,
     .Deinitialize = &EXT_INT_Deinitialize,
     .InterruptDisable = &EXT_INT_InterruptDisable,
@@ -69,18 +69,18 @@ void EXT_INT_Initialize(void)
     EXT_INT_InterruptEnable(INT0);
 
     /*******
-     * AutobaudSwitch
+     * Autobaud_Trigger_Switch
      * Clear the interrupt flag
      * Set the external interrupt edge detect
      * Enable the interrupt, if enabled in the UI. 
      ********/
-    EXT_INT_InterruptFlagClear(AutobaudSwitch);   
-    EXT_INT_PositiveEdgeSet(AutobaudSwitch);
-    EXT_INT_InterruptEnable(AutobaudSwitch);
+    EXT_INT_InterruptFlagClear(Autobaud_Trigger_Switch);   
+    EXT_INT_PositiveEdgeSet(Autobaud_Trigger_Switch);
+    EXT_INT_InterruptEnable(Autobaud_Trigger_Switch);
 
     // Ext interrupt Callback Register
     EXT_INT_CallbackRegister(INT0, &EXT_INT0_Callback);
-    EXT_INT_CallbackRegister(AutobaudSwitch, &EXT_INT1_Callback);
+    EXT_INT_CallbackRegister(Autobaud_Trigger_Switch, &EXT_INT1_Callback);
 }
 
 void EXT_INT_Deinitialize(void)
@@ -89,10 +89,10 @@ void EXT_INT_Deinitialize(void)
     EXT_INT_InterruptDisable(INT0);
     //default setting is positive edge
     EXT_INT_PositiveEdgeSet(INT0);
-    EXT_INT_InterruptFlagClear(AutobaudSwitch);   
-    EXT_INT_InterruptDisable(AutobaudSwitch);
+    EXT_INT_InterruptFlagClear(Autobaud_Trigger_Switch);   
+    EXT_INT_InterruptDisable(Autobaud_Trigger_Switch);
     //default setting is positive edge
-    EXT_INT_PositiveEdgeSet(AutobaudSwitch);
+    EXT_INT_PositiveEdgeSet(Autobaud_Trigger_Switch);
 }
 
 void EXT_INT_PositiveEdgeSet(enum EXT_INT interruptNum)
@@ -103,7 +103,7 @@ void EXT_INT_PositiveEdgeSet(enum EXT_INT interruptNum)
             INTCON2bits.INT0EP = 0;
             break;
 
-        case AutobaudSwitch:
+        case Autobaud_Trigger_Switch:
             INTCON2bits.INT1EP = 0;
             break;
 
@@ -120,7 +120,7 @@ void EXT_INT_NegativeEdgeSet(enum EXT_INT interruptNum)
             INTCON2bits.INT0EP = 1;
             break;
 
-        case AutobaudSwitch:
+        case Autobaud_Trigger_Switch:
             INTCON2bits.INT1EP = 1;
             break;
 
@@ -137,7 +137,7 @@ void EXT_INT_InterruptEnable(enum EXT_INT interruptNum)
             IEC0bits.INT0IE = 1;
             break;
             
-        case AutobaudSwitch:
+        case Autobaud_Trigger_Switch:
             IEC0bits.INT1IE = 1;
             break;
             
@@ -154,7 +154,7 @@ void EXT_INT_InterruptDisable(enum EXT_INT interruptNum)
             IEC0bits.INT0IE = 0;
             break;
             
-        case AutobaudSwitch:
+        case Autobaud_Trigger_Switch:
             IEC0bits.INT1IE = 0;
             break;
             
@@ -171,7 +171,7 @@ void EXT_INT_InterruptFlagClear(enum EXT_INT interruptNum)
             IFS0bits.INT0IF = 0;
             break;
 
-        case AutobaudSwitch:
+        case Autobaud_Trigger_Switch:
             IFS0bits.INT1IF = 0;
             break;
 
@@ -191,7 +191,7 @@ void EXT_INT_CallbackRegister(enum EXT_INT interruptNum, void (*handler)(void))
             }
             break;
             
-        case AutobaudSwitch:
+        case Autobaud_Trigger_Switch:
             if(NULL != handler)
             {
                 EXT_INT1_Handler = handler;

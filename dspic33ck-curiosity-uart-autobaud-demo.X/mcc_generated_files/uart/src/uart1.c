@@ -286,14 +286,3 @@ uint32_t UART1_BaudRateGet(void)
     }
     return baudRate;
 }
-
-int __attribute__((__section__(".libc.write"))) write(int handle, void *buffer, unsigned int len) {
-    unsigned int numBytesWritten = 0 ;
-    while(!UART1_IsTxDone());
-    while(numBytesWritten<len)
-    {
-        while(!UART1_IsTxReady());
-        UART1_Write(*((uint8_t *)buffer + numBytesWritten++));
-    }
-    return numBytesWritten;
-}

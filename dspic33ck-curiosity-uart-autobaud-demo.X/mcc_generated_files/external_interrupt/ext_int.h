@@ -50,48 +50,48 @@
  *           This allows defining a structure with application specific name using 
  *           the 'Custom Name' field. Application specific name allows the API Portability.
 */
-extern const struct EXT_INTERRUPT_INTERFACE External_Interrupt;
+extern const struct EXT_INTERRUPT_INTERFACE External_Trigger_Switches;
 
 /**
  * @ingroup  ext_interruptdriver
  * @brief    This macro defines the Custom Name for \ref EXT_INT_Initialize API
  */
-#define External_Interrupt_Initialize EXT_INT_Initialize
+#define External_Trigger_Switches_Initialize EXT_INT_Initialize
 /**
  * @ingroup  ext_interruptdriver
  * @brief    This macro defines the Custom Name for \ref EXT_INT_Deinitialize API
  */
-#define External_Interrupt_Deinitialize EXT_INT_Deinitialize
+#define External_Trigger_Switches_Deinitialize EXT_INT_Deinitialize
 /**
  * @ingroup  ext_interruptdriver
  * @brief    This macro defines the Custom Name for \ref EXT_INT_PositiveEdgeSet API
  */
-#define External_Interrupt_PositiveEdgeSet EXT_INT_PositiveEdgeSet
+#define External_Trigger_Switches_PositiveEdgeSet EXT_INT_PositiveEdgeSet
 /**
  * @ingroup  ext_interruptdriver
  * @brief    This macro defines the Custom Name for \ref EXT_INT_NegativeEdgeSet API
  */
-#define External_Interrupt_NegativeEdgeSet EXT_INT_NegativeEdgeSet
+#define External_Trigger_Switches_NegativeEdgeSet EXT_INT_NegativeEdgeSet
 /**
  * @ingroup  ext_interruptdriver
  * @brief    This macro defines the Custom Name for \ref EXT_INT_InterruptEnable API
  */
-#define External_Interrupt_InterruptEnable EXT_INT_InterruptEnable
+#define External_Trigger_Switches_InterruptEnable EXT_INT_InterruptEnable
 /**
  * @ingroup  ext_interruptdriver
  * @brief    This macro defines the Custom Name for \ref EXT_INT_InterruptDisable API
  */
-#define External_Interrupt_InterruptDisable EXT_INT_InterruptDisable
+#define External_Trigger_Switches_InterruptDisable EXT_INT_InterruptDisable
 /**
  * @ingroup  ext_interruptdriver
  * @brief    This macro defines the Custom Name for \ref EXT_INT_InterruptFlagClear API
  */
-#define External_Interrupt_InterruptFlagClear EXT_INT_InterruptFlagClear
+#define External_Trigger_Switches_InterruptFlagClear EXT_INT_InterruptFlagClear
 /**
  * @ingroup  ext_interruptdriver
  * @brief    This macro defines the Custom Name for \ref EXT_INT_CallbackRegister API
  */
-#define External_Interrupt_CallbackRegister EXT_INT_CallbackRegister
+#define External_Trigger_Switches_CallbackRegister EXT_INT_CallbackRegister
 
 /**
  * @ingroup  ext_interruptdriver

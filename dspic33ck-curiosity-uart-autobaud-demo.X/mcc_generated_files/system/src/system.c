@@ -40,6 +40,7 @@
 #include "../../external_interrupt/ext_int.h"
 #include "../../uart/uart1.h"
 #include "../../uart/uart2.h"
+#include "../../uart/uart3.h"
 #include "../interrupt.h"
 
 
@@ -51,6 +52,7 @@ void SYSTEM_Initialize(void)
     EXT_INT_Initialize();
     UART1_Initialize();
     UART2_Initialize();
+    UART3_Initialize();
     INTERRUPT_GlobalEnable();
     INTERRUPT_Initialize();
 }
