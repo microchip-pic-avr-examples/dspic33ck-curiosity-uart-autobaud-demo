@@ -9,6 +9,8 @@
 The project demonstrates the usage of UART Autobaud feature and how in realtime the Primary UART tunes the Secondary UART to its baudrate.
 We make use of dsPIC33CK Curiosity Development Board and configure the peripherals using MPLAB® Code Configurator.
 
+![BlockDiagram](images/block_diagram.gif)
+
 ## Related Documentation
 
 [dsPIC33CK256MP508 datasheet](https://www.microchip.com/dsPIC33CK256MP508) for more information or specifications
