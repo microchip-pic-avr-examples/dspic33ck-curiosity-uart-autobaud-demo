@@ -1,4 +1,4 @@
-# dspic33ck-curiosity-uart-autobaud-demo v1.00
+# dspic33ck-curiosity-uart-autobaud-demo v1.0.0
 
 ### Release Highlights
 
